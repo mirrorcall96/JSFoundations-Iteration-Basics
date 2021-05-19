@@ -10,6 +10,10 @@
  */
 function getOdds(numbers) {
   // Your code here
+  numbers = numbers.filter(function (num){
+    if (num % 2 !==0) return num;
+  });
+  return numbers
 }
 
 /**
@@ -24,6 +28,10 @@ function getOdds(numbers) {
  */
 function getEvens(numbers) {
   // Your code here
+  numbers= numbers.filter(function (num){
+    if (num % 2 ===0) return num;
+  });
+  return numbers;
 }
 
 /**
@@ -37,6 +45,11 @@ function getEvens(numbers) {
  */
 function countOccurences(x, numbers) {
   // Your code here
+  let counter =0;
+  numbers.forEach(element => {
+    if (element===  x) counter++;
+  });
+  return counter;
 }
 
 /**
@@ -49,6 +62,10 @@ function countOccurences(x, numbers) {
  */
 
 function makeThemDoctors(students) {
+  students = students.map(function(student){
+    return "Dr. "+student;
+  });
+  return students
   // Your code here
 }
 
