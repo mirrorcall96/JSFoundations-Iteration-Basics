@@ -10,7 +10,7 @@
  */
 function getOdds(numbers) {
   // Your code here
-  numbers = numbers.filter(function (num){
+  numbers = numbers.filter(num =>{
     if (num % 2 !==0) return num;
   });
   return numbers
@@ -28,7 +28,7 @@ function getOdds(numbers) {
  */
 function getEvens(numbers) {
   // Your code here
-  numbers= numbers.filter(function (num){
+  numbers= numbers.filter(num =>{
     if (num % 2 ===0) return num;
   });
   return numbers;
@@ -62,7 +62,7 @@ function countOccurences(x, numbers) {
  */
 
 function makeThemDoctors(students) {
-  students = students.map(function(student){
+  students = students.map(student => {
     return "Dr. "+student;
   });
   return students
